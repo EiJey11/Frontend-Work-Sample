@@ -4,11 +4,11 @@ export default function Table({companiesList}) {
   return (
     <table className='flex flex-col justify-center mt-4'>
       <thead>
-        <tr className='flex flex-row items-center bg-indigo-800 text-white'>
-          <th className='basis-1/12 text-sm md:text-base py-1'>Id</th>
-          <th className='basis-7/12 text-sm md:text-base py-1'>Name</th>
-          <th className='basis-1/12 text-sm md:text-base py-1'>Type</th>
-          <th className='basis-3/12 text-sm md:text-base text-center'>Date</th>
+        <tr className='flex flex-row items-center bg-black text-white'>
+          <th className='basis-1/12 text-sm md:text-base border-r border-white last:border-r-0 py-1'>Id</th>
+          <th className='basis-7/12 text-sm md:text-base border-r border-white last:border-r-0 py-1'>Name</th>
+          <th className='basis-1/12 text-sm md:text-base border-r border-white last:border-r-0 py-1'>Type</th>
+          <th className='basis-3/12 text-sm md:text-base border-r border-white last:border-r-0 text-center'>Date</th>
         </tr>
       </thead>
       <tbody>

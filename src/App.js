@@ -64,10 +64,10 @@ function App() {
 
 
   return (
-    <div className='flex flex-col justify-start h-screen w-full md:min-w-[400px] px-2 pt-16 md:pt-12 pb-12'>
+    <div className='flex flex-col justify-start h-screen w-full md:w-[50vw] px-2 pt-16 md:pt-12 pb-12'>
       <div className='relative'>
         <input
-          className='flex items-start justify-start bg-gray-200 md:w-[30vw] py-2 px-3 rounded-md'
+          className='flex items-start justify-start border-b border-slate-600 md:w-[49vw] py-2 px-3'
           type="text"
           placeholder="Search"
           value={searchTerm}
@@ -86,7 +86,7 @@ function App() {
       </div>
       <div className='flex items-center justify-start w-full'>
         <button
-          className='text-blue-500 underline underline-offset-2 rounded-md mt-6 text-sm font-semibold' 
+          className='underline underline-offset-2 rounded-md mt-6 text-sm font-semibold hover:cursor-pointer' 
           onClick={() => {
             setSortOrder(sortOrder === "asc" ? "desc" : "asc");
           }}
@@ -94,8 +94,8 @@ function App() {
           Sort {sortOrder === "desc" ? "Ascending" : "Descending"}
         </button>
 
-      <select className='mt-6 ml-4 px-2 text-blue-500 underline underline-offset-2 rounded-md text-sm font-semibold' value={selectedType} onChange={handleTypeChange}>
-          <option className='text-blue-500 underline underline-offset-2 rounded-md mt-6 text-sm font-semibold' value="">Sort by Type</option>
+      <select className='mt-6 ml-4 px-2 underline underline-offset-2 rounded-md text-sm font-semibold hover:cursor-pointer' value={selectedType} onChange={handleTypeChange}>
+          <option className='underline underline-offset-2 rounded-md mt-6 text-sm font-semibold' value="">Sort by Type</option>
             {Array.from(new Set(companies.map((company) => company.type))).sort().map((type) => (
             <option key={type} value={type}>
               {type}
