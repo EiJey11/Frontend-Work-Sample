@@ -96,11 +96,12 @@ function App() {
 
       <select className='mt-6 ml-4 px-2 text-blue-500 underline underline-offset-2 rounded-md text-sm font-semibold' value={selectedType} onChange={handleTypeChange}>
           <option className='text-blue-500 underline underline-offset-2 rounded-md mt-6 text-sm font-semibold' value="">Sort by Type</option>
-            {Array.from(new Set(companies.map((company) => company.type))).map((type) => (
-              <option key={type} value={type}>
-                {type}
-              </option>
-        ))}
+            {Array.from(new Set(companies.map((company) => company.type))).sort().map((type) => (
+            <option key={type} value={type}>
+              {type}
+            </option>
+))}
+
       </select>
 
       </div>
